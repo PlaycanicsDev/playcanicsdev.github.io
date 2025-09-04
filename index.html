@@ -1,13 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playcanics Dev</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Made in Alberta · Privacy Policy</title>
+    <meta name="description" content="Privacy policy for Made In Alberta apps." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Keep only dark theme tokens */
+        :root[data-theme="dark"] {
+            --bg: #0b1220;
+            --card: #0f172a;
+            --muted-card: #0b1220;
+            --text: #e5e7eb;
+            --muted: #a3acc2;
+            --primary: #60a5fa;
+            --accent: #67e8f9;
+            --ring: rgba(96, 165, 250, 0.4);
+            --radius: 14px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+            --spacing: clamp(16px, 2.5vw, 28px);
+            --container: 1120px;
+            --transition: .25s ease;
+            --nav-h: 64px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, sans-serif;
+            color: var(--text);
+            background: radial-gradient(1200px 600px at 10% -10%, rgba(34, 211, 238, .22), transparent 60%),
+                radial-gradient(900px 500px at 90% 0%, rgba(96, 165, 250, .25), transparent 60%),
+                linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+
+        header {
+            text-align: center;
+            padding: var(--spacing) 0;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 0.5em;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(100, 116, 139, .2);
+            border-radius: var(--radius);
+            padding: var(--spacing);
+            box-shadow: var(--shadow);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 2rem 0;
+        }
+
+        a[href^="mailto:"] {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        a[href^="mailto:"]:hover {
+            color: #22d3ee;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Welcome to PlaycanicsDev</h1>
-  <p>This is the new GitHub Pages site!</p>
+    <header class="container">
+        <h1>Made In Alberta: Privacy Policy</h1>
+        <p>Effective Date: September 4, 2025</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Overview</h2>
+            <p>The Made in Alberta apps prioritize your privacy. We do not collect any personally identifiable
+                information unless explicitly stated and agreed upon. This privacy policy outlines our practices across
+                all our applications and services.</p>
+        </section>
+
+        <section class="card">
+            <h2>Personal Information</h2>
+            <p>Our apps do not collect your name, email address, or any personally identifiable information unless you
+                voluntarily provide it through support inquiries or feedback forms.</p>
+        </section>
+
+        <section class="card">
+            <h2>Non-Personal Information</h2>
+            <p>We may collect limited non-personal data such as usage patterns, crash logs, and device information (OS
+                version, screen size, app version) to help us improve performance and user experience.</p>
+        </section>
+
+        <section class="card">
+            <h2>Third-Party Services</h2>
+            <p>We may use third-party analytics or performance monitoring tools that are compliant with industry
+                standards. These services collect only anonymized, aggregated data.</p>
+        </section>
+
+        <section class="card">
+            <h2>Children's Privacy</h2>
+            <p>Our applications are not intended for children under 13. We do not knowingly collect personal data from
+                children. If you believe this has occurred, please contact us.</p>
+        </section>
+
+        <section class="card">
+            <h2>Changes to This Policy</h2>
+            <p>This privacy policy may be updated periodically. Any changes will be reflected on this page. Continued
+                use of the apps implies acceptance of the updated terms.</p>
+        </section>
+
+        <section class="card">
+            <h2>Contact</h2>
+            <p>If you have questions or concerns about your data or this policy, contact:</p>
+            <p><strong>Email:</strong> <a href="mailto:ryan.checora@gmail.com">ryan.checora@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Made In Alberta · All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>
